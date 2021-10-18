@@ -14,6 +14,8 @@ const business = {
   reviewCount: 90
 };
 
+const { name, state, zipCode, category, rating, reviewCount} = business;
+
 class Business extends React.Component {
   render() {
     return (
@@ -21,17 +23,17 @@ class Business extends React.Component {
         <div className="image-container">
           <img src='https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg' alt=''/>
         </div>
-        <h2>{business.name}</h2>
+        <h2>{name}</h2>
         <div className="Business-information">
           <div className="Business-address">
-            <p>{business.name}</p>
+            <p>{name}</p>
             <p>Bordertown</p>
-            <p>{business.state business.zipCode}</p>
+            <p>{state} {zipCode}</p>
           </div>
           <div className="Business-reviews">
-            <h3>{business.category.toUpperCase()}</h3>
-            <h3 className="rating">{business.rating} stars</h3>
-            <p>{business.reviewCount} reviews</p>
+            <h3>{category.toUpperCase()}</h3>
+            <h3 className="rating">{rating} stars</h3>
+            <p>{reviewCount} reviews</p>
           </div>
         </div>
       </div>
