@@ -14,17 +14,18 @@ const defaultState = {
 };
 
 const Index = () => {
-  const [input, setInput] = useState("");
+  const [name, setName] = useState("");
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input) {
-      const newPerson = { id: new Date().getTime().toString(), input };
+    if (name) {
+      const newPerson = { id: new Date().getTime().toString(), name };
       dispatch({ type: "ADD_PERSON", payload: newPerson });
       // clear input field
-      setInput("");
+      setName("");
       console.log(state);
+      console.log(dispatch);
     } else {
       dispatch({ type: "NO_VALUE" });
     }
@@ -47,8 +48,8 @@ const Index = () => {
           </h2>
           <input
             type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <button type="submit">add</button>
@@ -56,7 +57,7 @@ const Index = () => {
       {state.people.map((person) => {
         return (
           <div key={person.id} className="item">
-            <h4>{person.input}</h4>
+            <h4>{person.name}</h4>
             <button
               onClick={() => {
                 dispatch({ type: "REMOVE_PERSON", payload: person.id });
