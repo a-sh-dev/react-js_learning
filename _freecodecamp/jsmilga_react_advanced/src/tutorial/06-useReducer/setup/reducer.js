@@ -6,7 +6,8 @@ export const reducer = (state, action) => {
         ...state,
         people: newPeople,
         isModalOpen: true,
-        modalContent: "new person added"
+        // modalContent: "new person added"
+        modalContent: `${action.payload.name} is added`
       };
 
     case "NO_VALUE":
@@ -23,14 +24,20 @@ export const reducer = (state, action) => {
       };
 
     case "REMOVE_PERSON":
-      const removePerson = state.people.filter(
+      // .filter() returns an array
+      const remainingPeople = state.people.filter(
         (person) => person.id !== action.payload
       );
+      const removedPerson = state.people.find(
+        (person) => person.id === action.payload
+      );
+
       return {
         ...state,
-        people: removePerson,
+        people: remainingPeople,
         isModalOpen: true,
-        modalContent: "a person is removed"
+        // modalContent: "a person is removed"
+        modalContent: `${removedPerson.name} is removed`
       };
 
     default:
