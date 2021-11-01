@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import people from "./data";
+import people from "../db/data";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 
 const Review = () => {
@@ -49,7 +49,7 @@ const Review = () => {
   };
 
   return (
-    <article className="review">
+    <div className="review">
       <div className="img-container">
         <img src={image} alt={name} className="person-img" />
         <span className="quote-icon">
@@ -70,7 +70,7 @@ const Review = () => {
       <button className="random-btn" onClick={randomPerson}>
         surprise me
       </button>
-    </article>
+    </div>
   );
 };
 
