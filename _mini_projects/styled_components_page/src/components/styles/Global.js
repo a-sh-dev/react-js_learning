@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.body};
     color: hsl(192, 100%, 9%);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.15em;
     margin: 0;
   }
