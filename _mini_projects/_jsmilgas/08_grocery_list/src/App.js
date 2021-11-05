@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from "react";
 import List from "./components/List";
 import Alert from "./components/Alert";
-
-const getLocalStorage = () => {
-  let list = localStorage.getItem("groceryList");
-  // check if the local storage key exists, add items to the list
-  if (list) {
-    return JSON.parse(localStorage.getItem("groceryList"));
-  } else {
-    // else create an empty array
-    return [];
-  }
-};
+import { getLocalStorage } from "utils/localStorage";
 
 function App() {
   // Grocery list states
   const [name, setName] = useState("");
   const [list, setList] = useState(getLocalStorage());
-  // Handle edit item
+  // Handle editing item
   const [editId, setEditId] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
-  // Modals
+  // Modals alert
   const [alert, setAlert] = useState({
     show: false,
     msg: "",
@@ -97,7 +87,7 @@ function App() {
       <form onSubmit={handleSubmit} className="grocery-form">
         {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
         <h3>
-          <span role="img" aria-label="bud" style={{ marginRight: "0.25em" }}>
+          <span role="img" aria-label="plant" style={{ marginRight: "0.25em" }}>
             🪴
           </span>
           grocery list
@@ -117,12 +107,12 @@ function App() {
       </form>
       {/* GROCERY LIST */}
       {list.length > 0 && (
-        <div className="grocery-container">
+        <section className="grocery-container">
           <List items={list} removeItem={removeItem} editItem={editItem} />
           <button className="clear-btn" onClick={clearList}>
             clear items
           </button>
-        </div>
+        </section>
       )}
     </section>
   );
