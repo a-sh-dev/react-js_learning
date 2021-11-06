@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/06-useReducer/setup";
+import Setup from "./tutorial/07-prop-drilling/setup/1-prop-drilling";
 
 function App() {
   return (
