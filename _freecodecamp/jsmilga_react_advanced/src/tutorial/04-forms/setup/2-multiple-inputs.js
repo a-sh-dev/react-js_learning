@@ -17,6 +17,7 @@ const ControlledInputs = () => {
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+    // dynamic object properties - [name]: value
     setPerson({ ...person, [name]: value });
   };
 

@@ -13,8 +13,9 @@
   - `useState` &  `useEffect` (`setTimeout`)
   - adding, editing, removing items
   - setting alert
+  - `useRef` →  when editing, utilising `useEffect` to target the input form to `focus()`for better UX
 - Forms
 - Utilising `local storage`
 
-<small>Based on [*John Smilga's "Code 15 React Projects - Complete Course"*](https://youtu.be/a_7Z7C_JCyo) with FreeCodeCamp.org
+<small>Based on [*John Smilga's "Code 15 React Projects - Complete Course"*](https://youtu.be/a_7Z7C_JCyo) with FreeCodeCamp.org</small>
 

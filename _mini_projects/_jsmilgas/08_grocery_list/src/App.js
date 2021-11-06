@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import List from "./components/List";
 import Alert from "./components/Alert";
 import { getLocalStorage } from "utils/localStorage";
+import { generateId } from "utils/utilities";
 
 function App() {
   // Grocery list states
@@ -10,6 +11,7 @@ function App() {
   // Handle editing item
   const [editId, setEditId] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const inputRef = useRef(null);
   // Modals alert
   const [alert, setAlert] = useState({
     show: false,
@@ -44,7 +46,7 @@ function App() {
       showAlert(true, "success", `${name} is added`);
       // add new item
       const newItem = {
-        id: new Date().getTime().toString(),
+        id: generateId(),
         title: name
       };
       // update list array with newItem
@@ -77,6 +79,13 @@ function App() {
     setName(specificItem.title);
   };
 
+  // ON EDITING - FOCUS INPUT FORM
+  useEffect(() => {
+    if (isEditing) {
+      inputRef.current.focus();
+    }
+  }, [isEditing]);
+
   // LOCAL STORAGE
   useEffect(() => {
     localStorage.setItem("groceryList", JSON.stringify(list));
@@ -99,6 +108,7 @@ function App() {
             placeholder="e.g. eggs"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            ref={inputRef}
           />
           <button className="submit-btn" type="submit">
             {isEditing ? "edit" : "add"}
