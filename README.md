@@ -8,5 +8,5 @@ Learning lessons from various sources, such as:
 - Freecodercamp.org
 - Other great free Youtube tutorials
 
-Please navigate to the `_mini projects` to [*see*](./mini_projects) most of the lesson outcomes previews. 
+Please navigate to the `_mini projects` to [*see*](./_mini_projects) most of the lesson outcomes previews. 
 
