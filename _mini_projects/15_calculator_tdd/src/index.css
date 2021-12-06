@@ -1,0 +1,37 @@
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;700&display=swap");
+
+/* Link for index.html */
+/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;700&display=swap" rel="stylesheet"> */
+
+/* font-family: 'Bellota Text', cursive; */
+
+/*  
+=====================
+ROOT 
+=====================
+*/
+
+:root {
+  --main-font: "Bellota Text", sans-serif;
+}
+
+/*  
+=====================
+RESET 
+=====================
+*/
+
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*  
+=====================
+GLOBAL VARIABLES 
+=====================
+*/
