@@ -11,4 +11,4 @@
 - Implement CSS variables for responsive design and layout
 - React PropTypes for component props checking / validation
 
-<sub>Based on [*Test-Driven Development with React, Jest, and Enzyme*](https://testdriven.io/blog/tdd-with-react-jest-and-enzyme-part-one/).</sub>
+<sub>Based on [*Test-Driven Development with React, Jest, and Enzyme*](https://testdriven.io/blog/tdd-with-react-jest-and-enzyme-part-one/). Original tutorial utilised class components, this practice includes converting to functional components and hooks</sub>
