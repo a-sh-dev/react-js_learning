@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './Calculator.css';
+import Display from '../Display/Display';
 
 const Calculator = () => {
   const calcInitialState = {
@@ -14,7 +16,7 @@ const Calculator = () => {
     storedValue: '',
   };
 
-  const [calcState, setCalcState] = useState(calcInitialState);
+  const [calcState, setCalcState] = React.useState(calcInitialState);
 
   const callOperator = () => {
     console.log('call operation');
@@ -30,7 +32,9 @@ const Calculator = () => {
 
   return (
     <>
-      <div className="calculator-container"></div>
+      <div className="calculator-container">
+        <Display displayValue={calcState.displayValue} />
+      </div>
     </>
   );
 };
