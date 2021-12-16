@@ -14,6 +14,8 @@ function App() {
 
   console.log('re-rendered');
   console.log(values);
+  console.log('----', values.password);
+  console.log('check ->', values.password === values.confirmPassword);
 
   const handleSubmit = (e) => {
     e.preventDefault();
