@@ -2,11 +2,11 @@ import React from 'react';
 import './formInput.css';
 
 function FormInput(props) {
-  const { label, onChange, id, ...inputProps } = props;
+  const { label, errorMessage, onChange, id, ...inputProps } = props;
   return (
     <div className="formInput">
       {/* <label>{props.label}</label> */}
-      <label>{label}</label>
+      {/* <label>{label}</label> */}
       <input
         {...inputProps}
         onChange={onChange}
@@ -15,6 +15,7 @@ function FormInput(props) {
         // ref={props.refer}
         // onChange={(e) => props.setUsername(e.target.value)}
       />
+      <span className="error_msg">{errorMessage}</span>
     </div>
   );
 }

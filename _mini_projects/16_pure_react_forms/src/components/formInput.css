@@ -1,7 +1,25 @@
 input {
-  padding: 15px 30px;
-  margin: 10px 0;
-  border: solid 1px #fab;
+  padding: 12px 20px;
+  margin: 0.8rem;
+  border: solid 1px darkslategray;
+  background-color: white;
   border-radius: 30px;
   font-family: "Varela Round";
+  font-size: 0.8rem;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.error_msg {
+  font-size: 0.8rem;
+  color: rgb(193, 68, 153);
+  padding-left: 1.5rem;
+  font-style: italic;
 }

@@ -24,8 +24,9 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
+    <div className="app">
+      <form onSubmit={handleSubmit} className="form_container">
+        <h1>🪴 Registration</h1>
         {inputs.map((input) => (
           <FormInput
             key={input.id}

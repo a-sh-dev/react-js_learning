@@ -1,5 +1,9 @@
 // ! These will be used to iterate form inputs automation
 
+// have to setup the initial object to be imported in App.js later
+// otherwise, it wont work since values.password in confirmPassword
+// is undefined here
+
 let values = {
   password: '',
 };
