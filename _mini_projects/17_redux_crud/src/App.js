@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UserList from './features/users/UserList';
+import EditUser from './features/users/EditUser';
+import AddUser from './features/users/AddUser';
 
 function App() {
   return (
@@ -8,8 +10,8 @@ function App() {
         <Routes>
           <Route path="/">
             <Route path="/" element={<UserList />} />
-            <Route path="add-user" element={<h1>Add User</h1>} />
-            <Route path="edit-user" element={<h1>Edit User</h1>} />
+            <Route path="add-user" element={<AddUser />} />
+            <Route path="edit-user" element={<EditUser />} />
           </Route>
         </Routes>
       </div>
