@@ -15,3 +15,7 @@ code {
 .bg {
   background-color: rgb(248, 241, 255);
 }
+
+button {
+  margin: auto 0.5rem;
+}

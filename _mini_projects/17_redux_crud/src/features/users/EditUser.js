@@ -6,10 +6,10 @@ import { userUpdated } from './usersSlice';
 
 const EditUser = () => {
   const { pathname } = useLocation();
-  const userId = pathname.replace('/edit-user/', '');
+  const userId = parseInt(pathname.replace('/edit-user/', ''));
 
   const user = useSelector((state) =>
-    state.users.find((user) => user.id === userId),
+    state.users.entities.find((user) => user.id === userId),
   );
 
   const dispatch = useDispatch();
@@ -49,7 +49,7 @@ const EditUser = () => {
       </div>
       <div className="row">
         <div className="three columns">
-          <label for="nameInput">Name</label>
+          <label htmlFor="nameInput">Name</label>
           <input
             className="u-full-width"
             type="text"
@@ -58,7 +58,7 @@ const EditUser = () => {
             onChange={handleName}
             value={name}
           />
-          <label for="emailInput">Email</label>
+          <label htmlFor="emailInput">Email</label>
           <input
             className="u-full-width"
             type="email"
@@ -68,8 +68,8 @@ const EditUser = () => {
             value={email}
           />
           {error && error}
-          <button className="button-primary" onclick={handleClick}>
-            Add User
+          <button className="button-primary" onClick={handleClick}>
+            Edit User
           </button>
         </div>
       </div>
