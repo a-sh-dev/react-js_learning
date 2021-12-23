@@ -4,9 +4,10 @@
 
 ### **Learnings**
 
-In order to understand CRUD in React apps and how to manage global states to mitigate prop-drilling, `React-Redux` is essential to learn for a scalable app and better maintainability. 
+In order to understand CRUD in React apps and how to manage global states to mitigate prop-drilling, `React-Redux` is essential to learn for a scalable app and better maintainability. Also noted is `React Context`.
 
-- React-Redux
+- `React-Redux` using `@reduxjs/toolkit`
+- `React-Router-Dom` latest version (`v6`) 
 
 
 
