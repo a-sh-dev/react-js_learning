@@ -2,6 +2,8 @@
 
 <sub>This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</sub>
 
+![screenshot](./docs/ss.gif)
+
 ### **Learnings**
 
 In order to understand CRUD in React apps and how to manage global states to mitigate prop-drilling, `React-Redux` is essential to learn for a scalable app and better maintainability. Also noted is `React Context`.
