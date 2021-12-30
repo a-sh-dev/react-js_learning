@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     background: white;
     min-height: 100vh;
     margin: 0;
-    color: teal;
+    color: black;
     font-family: 'Epilogue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
