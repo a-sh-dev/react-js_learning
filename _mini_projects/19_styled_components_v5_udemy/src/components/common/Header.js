@@ -9,17 +9,29 @@ const HeaderWrapper = styled.header`
   padding: 0 16px;
   position: fixed;
   top: 0;
-  background: rgb(0, 45, 79);
+  background-image: linear-gradient(to right, #005044, #003253);
+  border-bottom: 2px solid #aef893;
 `;
 
 const Menu = styled.nav`
-  display: flex;
-  position: relative;
-  border-bottom: none;
-  margin: auto 0 auto auto;
-  width: initial;
-  left: initial;
-  top: initial;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  right: 0;
+  padding: 10px;
+  background-image: linear-gradient(to right, #005044, #003253);
+  border-bottom: 2px solid #aef893;
+
+  @media (min-width: 768px) {
+    display: flex;
+    border-bottom: none;
+    margin: auto 0 auto auto;
+    width: initial;
+    left: initial;
+    top: initial;
+    background: none;
+  }
 `;
 
 const StyledLink = styled(NavLink)`
@@ -29,7 +41,7 @@ const StyledLink = styled(NavLink)`
   margin: auto 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(177, 255, 177);
+  color: #aef893;
   letter-spacing: 1px;
 `;
 
