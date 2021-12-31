@@ -8,6 +8,8 @@ export const Button = styled.button`
   display: block;
   white-space: none;
   box-shadow: none;
+  font-family: 'Epilogue';
+  width: 100%;
 
   /* Add variants */
   ${(props) =>
@@ -18,8 +20,8 @@ export const Button = styled.button`
           font-size: 1.5em;
         `
       : css`
-          padding: 1rem 2rem;
-          border-radius: 0.5rem;
+          padding: 0.85rem 1.5rem;
+          border-radius: 5px;
           font-size: 1em;
         `}
 
