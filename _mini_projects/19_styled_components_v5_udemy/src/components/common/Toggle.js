@@ -7,7 +7,7 @@ const ToggleWrapper = styled.div`
   height: 25px;
   border-radius: 25px;
   border: 1px solid #ccc;
-  margin: auto;
+  margin: auto 0.85rem;
   display: flex;
   background: none;
 `;

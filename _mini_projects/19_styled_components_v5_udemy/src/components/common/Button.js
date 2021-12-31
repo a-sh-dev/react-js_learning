@@ -18,7 +18,8 @@ const largeStyles = ({ large }) => {
 };
 
 export const Button = styled.button`
-  color: white;
+  color: ${(props) =>
+    props.secondary ? props.theme.primaryColor : props.theme.primaryDarkColor};
   background: ${(props) =>
     props.secondary ? props.theme.primaryDarkColor : props.theme.primaryColor};
   font-weight: bold;

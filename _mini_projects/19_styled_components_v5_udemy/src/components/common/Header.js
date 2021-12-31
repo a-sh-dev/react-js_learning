@@ -2,11 +2,11 @@ import React, { useState, useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { Toggle } from './Toggle';
+import { Logo } from './Logo';
 
 const HeaderWrapper = styled.header`
   height: 70px;
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   padding: 0 16px;
   position: fixed;
@@ -20,12 +20,14 @@ const HeaderWrapper = styled.header`
 `;
 
 const Menu = styled.nav`
-  display: ${(props) => (props.open ? 'block' : 'none')};
+  display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
+  justify-content: center;
   width: 100%;
   top: 60px;
   right: 0;
   padding: 10px;
+  text-align: center;
   background-image: linear-gradient(
     to right,
     ${(props) => props.theme.secondaryDarkColor},
@@ -54,9 +56,9 @@ const StyledLink = styled(NavLink)`
   text-align: center;
   margin: auto 0;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: ${(props) => props.theme.primaryColor};
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 `;
 
 const MobileMenuIcon = styled.div`
@@ -84,6 +86,7 @@ export default function Header() {
 
   return (
     <HeaderWrapper>
+      <Logo />
       <MobileMenuIcon onClick={() => setMenuOpen((s) => !s)}>
         <div />
         <div />
