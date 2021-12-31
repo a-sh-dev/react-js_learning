@@ -5,6 +5,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    --vibrant-green: #aef893;
+  }
+
   body {
     background: white;
     min-height: 100vh;

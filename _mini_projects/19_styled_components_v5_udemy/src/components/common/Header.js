@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
@@ -10,18 +11,18 @@ const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
   background-image: linear-gradient(to right, #005044, #003253);
-  border-bottom: 2px solid #aef893;
+  border-bottom: 2px solid var(--vibrant-green);
 `;
 
 const Menu = styled.nav`
-  display: block;
+  display: ${(props) => (props.open ? 'block' : 'none')};
   position: absolute;
   width: 100%;
   top: 60px;
   right: 0;
   padding: 10px;
   background-image: linear-gradient(to right, #005044, #003253);
-  border-bottom: 2px solid #aef893;
+  border-bottom: 2px solid var(--vibrant-green);
 
   @media (min-width: 768px) {
     display: flex;
@@ -41,14 +42,40 @@ const StyledLink = styled(NavLink)`
   margin: auto 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: #aef893;
+  color: var(--vibrant-green);
   letter-spacing: 1px;
 `;
 
+const MobileMenuIcon = styled.div`
+  margin: auto 0 auto auto;
+  width: 25px;
+  min-width: 25px;
+  cursor: pointer;
+  /* padding: 5px; */
+
+  > div {
+    height: 3px;
+    background: var(--vibrant-green);
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <HeaderWrapper>
-      <Menu>
+      <MobileMenuIcon onClick={() => setMenuOpen((s) => !s)}>
+        <div />
+        <div />
+        <div />
+      </MobileMenuIcon>
+      <Menu open={menuOpen}>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/login">Login</StyledLink>
       </Menu>
