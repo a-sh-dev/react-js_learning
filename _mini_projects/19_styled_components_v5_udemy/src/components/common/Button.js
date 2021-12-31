@@ -1,5 +1,22 @@
 import styled, { css } from 'styled-components';
 
+// Add variants
+const largeStyles = ({ large }) => {
+  if (large) {
+    return css`
+      padding: 1.8rem 2.8rem;
+      border-radius: 0.8rem;
+      font-size: 1.5em;
+    `;
+  } else {
+    return css`
+      padding: 0.85rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1em;
+    `;
+  }
+};
+
 export const Button = styled.button`
   color: white;
   background: ${(props) =>
@@ -13,18 +30,7 @@ export const Button = styled.button`
   width: 100%;
 
   /* Add variants */
-  ${(props) =>
-    props.large
-      ? css`
-          padding: 1.8rem 2.8rem;
-          border-radius: 0.8rem;
-          font-size: 1.5em;
-        `
-      : css`
-          padding: 0.85rem 1.5rem;
-          border-radius: 5px;
-          font-size: 1em;
-        `}
+  ${largeStyles}
 
   &:disabled {
     background: #eee;
