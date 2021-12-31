@@ -18,10 +18,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--light-bg);
+    background: ${(props) => props.theme.bodyBackgroundColor};
+    color: ${(props) => props.theme.bodyFontColor};
     min-height: 100vh;
     margin: 0;
-    color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -15,6 +15,20 @@ const Form = styled.form`
     margin: 10px 0;
     font-size: 0.9rem;
   }
+
+  .intro {
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+
+  /* Direct reference of any child components */
+  > ${Button}:first-of-type {
+    margin-top: 20px;
+  }
+
+  > ${Input} {
+    margin-top: 10px;
+  }
 `;
 
 const defaultFormFields = {
@@ -62,6 +76,9 @@ export default function Login() {
           <Spinner />
         ) : (
           <>
+            <p className="intro">
+              For an existing account, please enter details
+            </p>
             <Input
               name="username"
               placeholder="Username"

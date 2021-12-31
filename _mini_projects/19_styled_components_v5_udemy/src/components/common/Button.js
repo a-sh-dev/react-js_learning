@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Button = styled.button`
   color: white;
   background: ${(props) =>
-    props.secondary ? 'var(--blue)' : 'var(--dark-blue)'};
+    props.secondary ? props.theme.primaryDarkColor : props.theme.primaryColor};
   font-weight: bold;
   border: none;
   display: block;
