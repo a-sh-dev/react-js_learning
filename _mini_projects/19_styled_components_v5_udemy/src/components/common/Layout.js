@@ -16,7 +16,7 @@ const Content = styled.main`
   h5,
   h6 {
     font-weight: 800;
-    color: var(--dark-green);
+    color: ${(props) => props.theme.primaryDarkColor};
   }
 `;
 

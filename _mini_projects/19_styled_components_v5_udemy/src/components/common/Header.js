@@ -12,10 +12,10 @@ const HeaderWrapper = styled.header`
   top: 0;
   background-image: linear-gradient(
     to right,
-    var(--dark-green),
-    var(--dark-blue)
+    ${(props) => props.theme.secondaryDarkColor},
+    ${(props) => props.theme.primaryDarkColor}
   );
-  border-bottom: 5px solid var(--blue);
+  border-bottom: 5px solid ${(props) => props.theme.primaryColor};
 `;
 
 const Menu = styled.nav`
@@ -27,10 +27,14 @@ const Menu = styled.nav`
   padding: 10px;
   background-image: linear-gradient(
     to right,
-    var(--dark-green),
-    var(--dark-blue)
+    ${(props) => props.theme.secondaryDarkColor},
+    ${(props) => props.theme.primaryDarkColor}
   );
-  border-bottom: 5px solid var(--blue);
+  border-bottom: 5px solid ${(props) => props.theme.primaryColor};
+
+  a.active {
+    font-weight: 800;
+  }
 
   @media (min-width: 768px) {
     display: flex;
@@ -50,7 +54,7 @@ const StyledLink = styled(NavLink)`
   margin: auto 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--blue);
+  color: ${(props) => props.theme.primaryColor};
   letter-spacing: 1px;
 `;
 
@@ -63,7 +67,7 @@ const MobileMenuIcon = styled.div`
 
   > div {
     height: 3px;
-    background: var(--blue);
+    background: ${(props) => props.theme.primaryColor};
     margin: 5px 0;
     width: 100%;
   }
