@@ -20,12 +20,16 @@ const Content = styled.main`
   }
 
   a {
-    box-shadow: inset 0 -1px ${(p) => p.theme.primaryDarkColor};
+    box-shadow: inset 0 -3px ${(p) => p.theme.primaryColor};
     text-decoration: none;
   }
 
+  a:visited {
+    color: ${(p) => p.theme.primaryDarkColor};
+  }
+
   a:hover {
-    background-color: ${(p) => p.theme.secondaryColor};
+    background-color: ${(p) => p.theme.primaryColor};
     transition: all 0.3s;
   }
 `;
