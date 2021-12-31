@@ -3,15 +3,19 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const HeaderWrapper = styled.header`
-  height: 60px;
+  height: 70px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   padding: 0 16px;
   position: fixed;
   top: 0;
-  background-image: linear-gradient(to right, #005044, #003253);
-  border-bottom: 2px solid var(--vibrant-green);
+  background-image: linear-gradient(
+    to right,
+    var(--dark-green),
+    var(--dark-blue)
+  );
+  border-bottom: 5px solid var(--blue);
 `;
 
 const Menu = styled.nav`
@@ -21,8 +25,12 @@ const Menu = styled.nav`
   top: 60px;
   right: 0;
   padding: 10px;
-  background-image: linear-gradient(to right, #005044, #003253);
-  border-bottom: 2px solid var(--vibrant-green);
+  background-image: linear-gradient(
+    to right,
+    var(--dark-green),
+    var(--dark-blue)
+  );
+  border-bottom: 5px solid var(--blue);
 
   @media (min-width: 768px) {
     display: flex;
@@ -42,7 +50,7 @@ const StyledLink = styled(NavLink)`
   margin: auto 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--vibrant-green);
+  color: var(--blue);
   letter-spacing: 1px;
 `;
 
@@ -55,7 +63,7 @@ const MobileMenuIcon = styled.div`
 
   > div {
     height: 3px;
-    background: var(--vibrant-green);
+    background: var(--blue);
     margin: 5px 0;
     width: 100%;
   }
