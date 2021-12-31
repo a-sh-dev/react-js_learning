@@ -11,7 +11,10 @@ const GlobalStyle = createGlobalStyle`
     --dark-blue: #002443;
     --dark-green: #253C39;
     --light-bg: #E6F4F1;
+    --dark-bg: #9CADBC;
     --blue: #82BBE5;
+    --yellow: #F9F871;
+    --dark-yellow: #5c5c51;
   }
 
   body {

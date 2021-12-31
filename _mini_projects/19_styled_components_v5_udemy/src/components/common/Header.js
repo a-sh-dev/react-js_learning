@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState, useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { Toggle } from './Toggle';
 
 const HeaderWrapper = styled.header`
   height: 70px;
@@ -79,6 +80,7 @@ const MobileMenuIcon = styled.div`
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { id, setTheme } = useContext(ThemeContext);
 
   return (
     <HeaderWrapper>
@@ -90,6 +92,7 @@ export default function Header() {
       <Menu open={menuOpen}>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/login">Login</StyledLink>
+        <Toggle isActive={id === 'dark'} onToggle={setTheme} />
       </Menu>
     </HeaderWrapper>
   );
